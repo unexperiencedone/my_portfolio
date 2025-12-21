@@ -144,14 +144,31 @@ body {
 }
 
 /* We target the path inside the svg react-xarrows creates */
-.custom-arrow {
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  /* Ensure the filter isn't clipped */
-  overflow: visible !important; 
+
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+.animate-draw {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 2s ease-out forwards;
 }
 
-.custom-arrow:hover {
-  filter: drop-shadow(0 0 8px #38bdf8);
-  stroke-width: 3px;
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1.2s; }
+@keyframes opacity{
+  from{
+    opacity: 0,
+  }
+  to{
+    opacity: 1,
+  }
+}
+
+.animate-opacity {
+  animation: opacity 2s ease-in-out forwards;
+}
+
+.hover-font-ds:hover{
+  font-family: var(--font-dancing-script);
 }

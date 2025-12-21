@@ -2,6 +2,7 @@
 import { Playfair_Display, Dancing_Script } from "next/font/google";
 import Xarrow from "react-xarrows";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -14,10 +15,20 @@ export const ds = Dancing_Script({
 });
 
 export default function Home() {
+  const container = {
+    hidden: { opacity: 0 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.04 * i },
+    }),
+  };
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-8 bg-deep-space-blue-950">
-      <h1
-        className={`text-8xl font-semibold text-sky-100 ${ds.className} h-min text-center leading-[7rem] cursor-pointer`}
+      <motion.h1
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className={`text-8xl font-semibold text-sky-100 ${ds.className} h-min text-center leading-[7rem] cursor-pointer animate-opacity delay-2`}
       >
         <span className="relative inline-block -left-10 hover:[text-shadow:var(--shadow-glow)]">
           Are you{" "}
@@ -42,7 +53,11 @@ export default function Home() {
           color="#89c7dc"
           strokeWidth={3}
           headSize={7}
-          passProps = {{strokeDasharray:"5, 2",}}
+          passProps={{
+            style: { overflow: "visible" },
+            className:
+              "transition-all duration-300 hover:drop-shadow-[0_0_8px_#89c7dc] cursor-pointer animate-draw delay-2",
+          }}
         />
         <span
           id="elem2"
@@ -76,6 +91,11 @@ export default function Home() {
           color="#89c7dc"
           strokeWidth={3}
           headSize={7}
+          passProps={{
+            style: { overflow: "visible" },
+            className:
+              "transition-all duration-300 hover:drop-shadow-[0_0_8px_#89c7dc] cursor-pointer animate-draw delay-2",
+          }}
         />
         <span
           id="elem6"
@@ -90,11 +110,15 @@ export default function Home() {
           end="elem6"
           curveness={3.5}
           color="#89c7dc"
-          strokeWidth={3}
+          strokeWidth={4}
           headSize={7}
-          passProps={{strokeDasharray: "5, 2",}}
+          passProps={{
+            style: { overflow: "visible" },
+            className:
+              "transition-all duration-300 hover:drop-shadow-[0_0_8px_#89c7dc] cursor-pointer animate-draw delay-2",
+          }}
         />
-      </h1>
+      </motion.h1>
     </main>
   );
 }

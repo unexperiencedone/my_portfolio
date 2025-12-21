@@ -22,11 +22,12 @@ export const ds = Dancing_Script({
 const links = [
   { name: "Home", href: "/" },
   { name: "Blogs", href: "/blogs" },
-  { name: "Articles", href: "/articles" },
+  { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
+  { name: "Work", href: "/work"}
 ];
 
-export default function Navbar() {
+export default function NavBar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
 
