@@ -54,7 +54,7 @@ export default function NavBar() {
     <header className="h-min">
       <nav className={`fixed left-1/2 -translate-x-1/2 transition-all duration-700 cubic-bezier(0.4, 0, 0.2, 1) z-50 flex items-center justify-between
           ${isScrolled 
-            ? "top-4 w-[90%] max-w-4xl rounded-2xl bg-deep-space-blue-700/80 backdrop-blur-md shadow-lg px-8 py-3 border border-light-blue-300" 
+            ? "top-4 w-[90%] max-w-4xl rounded-2xl bg-deep-space-blue-700/40 backdrop-blur-md shadow-lg px-8 py-3 border-b border-light-blue-300" 
             : "top-0 w-full bg-deep-space-blue-900 px-6 py-4 border-b border-transparent"
           }`}>
         <h1 className={`text-3xl font-bold ${ds.className} text-air-force-blue-400`}>
