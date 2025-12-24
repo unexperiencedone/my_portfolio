@@ -1,5 +1,5 @@
 "use client";
-import NavBar from "@/components/NavBar";
+import NavBar from "../../components/NavBar";
 import { Playfair_Display, Dancing_Script } from "next/font/google";
 import Image from "next/image";
 
