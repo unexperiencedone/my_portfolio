@@ -28,14 +28,14 @@ export default function Home() {
         variants={container}
         initial="hidden"
         animate="visible"
-        className={`text-8xl font-semibold text-sky-100 ${ds.className} h-min text-center leading-[7rem] cursor-pointer animate-opacity delay-2`}
+        className={`text-8xl font-semibold text-sky-100 ${ds.className} h-min text-center leading-[7rem] cursor-pointer delay-2`}
       >
-        <span className="relative inline-block -left-10 hover:[text-shadow:var(--shadow-glow)]">
+        <span className="relative inline-block -left-10 hover:[text-shadow:var(--shadow-glow)] ">
           Are you{" "}
         </span>
         <span
           id="elem1"
-          className="relative left-6 -top-2 inline-block transition-all duration-300 ease-in-out hover:text-cerulean-200 hover:rotate-[-10deg] hover:[text-shadow:var(--shadow-glow)]"
+          className="relative left-6 -top-2 inline-block transition-all duration-300 ease-in-out hover:text-cerulean-200 hover:rotate-[-10deg] hover:[text-shadow:var(--shadow-glow)] animate-cursive"
         >
           Curious?
         </span>
@@ -75,7 +75,7 @@ export default function Home() {
         <br />
         <span
           id="elem5"
-          className="inline-block relative top-2 -left-44 transition-all duration-300 ease-in-out hover:text-cerulean-300 rotate-[-2.5deg] hover:rotate-0"
+          className="inline-block relative top-2 -left-44 transition-all duration-300 ease-in-out hover:text-cerulean-300 rotate-[-2.5deg] hover:rotate-0 opacity-0 animate-opacity"
         >
           <Link
             href="/about"
@@ -99,7 +99,7 @@ export default function Home() {
         />
         <span
           id="elem6"
-          className="inline-block -right-24 relative top-2 transition-all duration-300 ease-in-out hover:text-cerulean-300 rotate-[5deg] hover:rotate-0 hover:[text-shadow:0_4px_8px_rgba(0,0,0,0.3)]"
+          className="inline-block -right-24 relative top-2 transition-all duration-300 ease-in-out hover:text-cerulean-300 rotate-[5deg] hover:rotate-0 hover:[text-shadow:0_4px_8px_rgba(0,0,0,0.3)] animate-delay-opacity"
         >
           <Link href="/work" className="hover:[text-shadow:var(--shadow-glow)]">
             's work

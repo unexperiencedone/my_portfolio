@@ -92,23 +92,6 @@ export default function JourneyTimeline() {
 
   return (
     <div className="flex flex-col md:flex-row h-[500px] flex-1 gap-30 rounded-2x backdrop-blur-md">
-      {/* LEFT: DATE PICKER (Vertical Navigation) */}
-      <div className="flex md:flex-col overflow-y-visible no-scrollbar border-l-2 border-yale-blue-300/30 pl-4 space-y-2">
-        {journeyData.map((item, index) => (
-          <button
-            key={index}
-            id={`date-${index}`}
-            onClick={() => setActiveIndex(index)}
-            className={`text-left transition-all duration-300 py-2 px-4 rounded-lg font-bold ${
-              activeIndex === index
-                ? "text-yale-blue-300 text-xl scale-110 translate-x-2"
-                : "text-steel-blue-400 text-xs hover:text-yale-blue-100"
-            } ${ds.className}`} // Using your Dancing Script font
-          >
-            {item.month}
-          </button>
-        ))}
-      </div>
 
       {/* RIGHT: CONTENT DISPLAY */}
       <div className="flex-1 relative flex items-center justify-center">
@@ -133,9 +116,26 @@ export default function JourneyTimeline() {
           </div>
         ))}
       </div>
+      {/* LEFT: DATE PICKER (Vertical Navigation) */}
+      <div className="flex md:flex-col overflow-y-visible no-scrollbar border-l-2 border-yale-blue-300/30  space-y-2 ">
+        {journeyData.map((item, index) => (
+          <button
+            key={index}
+            id={`date-${index}`}
+            onClick={() => setActiveIndex(index)}
+            className={`text-left transition-all duration-300 py-2 px-4 rounded-lg font-bold ${
+              activeIndex === index
+                ? "text-yale-blue-300 text-xl scale-110 translate-x-2 underline"
+                : "text-steel-blue-400 text-xs hover:text-yale-blue-100"
+            } ${ds.className}`} // Using your Dancing Script font
+          >
+            {item.month}
+          </button>
+        ))}
+      </div>
       <Xarrow
-        start={`date-${activeIndex}`}
-        end={`content-box-${activeIndex}`}
+        end={`date-${activeIndex}`}
+        start={`content-box-${activeIndex}`}
         color="#afd8e9" // Using your sky blue color
         strokeWidth={2}
         path="smooth"
