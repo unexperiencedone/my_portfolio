@@ -24,7 +24,7 @@ export default function About() {
           className="min-h-screen flex lg:flex-row items-center lg:items-start justify-center gap-12 lg:gap-20 px-4 md:px-12 lg:px-20 py-10 text-steel-blue-200 ${playfair.className} p-8 leading-loose cursor-pointer w-full max-w-7xl mx-auto items-center"
         >
           <h1
-            className={`${ds.className} text-center flex flex-col justify-center flex-1 text-8xl gap-16 top-14 relative`}
+            className={`${ds.className} text-center flex flex-col justify-center flex-1 text-8xl gap-16 p-30`}
           >
             <span className="transition-all duration-300 inline-block relative text-light-blue-400 scroll-hybrid rotate-3 hover:rotate-0 hover:[text-shadow:0_4px_8px_#91c0d4]">
               Scroll a bit
