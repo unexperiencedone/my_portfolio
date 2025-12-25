@@ -19,11 +19,24 @@ export default function About() {
     <div className="min-h-screen items-center">
       <NavBar></NavBar>
       <main className="flex flex-col justify-around bg-deep-space-blue-950 min-h-screen p-20">
-        <div id = "scroll_phase" className="min-h-screen flex lg:flex-row items-center lg:items-start justify-center gap-12 lg:gap-20 px-4 md:px-12 lg:px-20 py-10 text-steel-blue-200 ${playfair.className} p-8 leading-loose cursor-pointer w-full max-w-7xl mx-auto items-center">
-            <h1 className={`${ds.className} text-center flex flex-col justify-center flex-1 text-8xl gap-16`}>    
-                
-                <span className="transition-all duration-300 inline-block relative text-light-blue-400 animate-opacity scroll-hybrid rotate-3 hover:rotate-0 hover:[text-shadow:0_4px_8px_#91c0d4]"><br />Scroll a bit</span><span className="inline-block relative scroll-hybrid rotate-3">to</span><span className=" transition-all duration-300 inline-block relative text-light-blue-400 animate-delay-opacity scroll-hybrid -rotate-3 hover:rotate-0 hover:[text-shadow:0_4px_8px_#91c0d4]">Explore.</span>
-            </h1>
+        <div
+          id="scroll_phase"
+          className="min-h-screen flex lg:flex-row items-center lg:items-start justify-center gap-12 lg:gap-20 px-4 md:px-12 lg:px-20 py-10 text-steel-blue-200 ${playfair.className} p-8 leading-loose cursor-pointer w-full max-w-7xl mx-auto items-center"
+        >
+          <h1
+            className={`${ds.className} text-center flex flex-col justify-center flex-1 text-8xl gap-16`}
+          >
+            <span className="transition-all duration-300 inline-block relative text-light-blue-400 animate-opacity scroll-hybrid rotate-3 hover:rotate-0 hover:[text-shadow:0_4px_8px_#91c0d4]">
+              <br />
+              Scroll a bit
+            </span>
+            <span className="inline-block relative scroll-hybrid rotate-3">
+              to
+            </span>
+            <span className=" transition-all duration-300 inline-block relative text-light-blue-400 animate-delay-opacity scroll-hybrid -rotate-3 hover:rotate-0 hover:[text-shadow:0_4px_8px_#91c0d4]">
+              Explore.
+            </span>
+          </h1>
         </div>
         <div
           id="who_Am_i"
@@ -191,14 +204,24 @@ export default function About() {
             </h1>
             <br />
             <p className="scroll-hybrid text-center text-[20px]">
-              Speaking of <span className={`inline-block font-bold hover:[text-shadow:var(--shadow-glow)] ${ds.className} text-yale-blue-300 m-1 -translate-y-1 text-[18px] rotate-2 hover:rotate-0 duration-100`}>skills</span> <br />I do have a lot in the
+              Speaking of{" "}
+              <span
+                className={`inline-block font-bold hover:[text-shadow:var(--shadow-glow)] ${ds.className} text-yale-blue-300 m-1 -translate-y-1 text-[18px] rotate-2 hover:rotate-0 duration-100`}
+              >
+                skills
+              </span>{" "}
+              <br />I do have a lot in the
               <span
                 className={`inline-block font-bold hover:[text-shadow:var(--shadow-glow)] ${ds.className} text-yale-blue-300 m-1 -translate-y-1 text-[18px] -rotate-2 hover:rotate-0 duration-100`}
               >
                 arsenal
               </span>
               of mine. <br />
-              <span className={`inline-block relative transition-all [text-shadow:var(--shadow-glow)] m-1 text-yale-blue-300`}>Intereseted!</span>
+              <span
+                className={`inline-block relative transition-all [text-shadow:var(--shadow-glow)] m-1 text-yale-blue-300`}
+              >
+                Intereseted!
+              </span>
             </p>
           </div>
         </div>
